@@ -1,0 +1,648 @@
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>
+    SECURE VOTE
+  </title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      background-image: url('images/flag.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 120%;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      color: azure;
+      position: -webkit-sticky;
+      /* Safari */
+      position: sticky;
+      top: 0;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      font-size: large;
+      color: rgb(255, 254, 254);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(226, 226, 226);
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+
+    #demo {
+      margin-top: 100px;
+    }
+
+    .carousel-inner {
+      margin-top: 70;
+      border-width: 1px;
+      border-color: black;
+
+
+    }
+
+
+    
+
+    #videoElement {
+
+      width: 200px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.132);
+      border-radius: 10%;
+      float: right;
+      /*background-image: url('images/profile.png');*/
+      background-size: cover;
+      margin-right:120px;
+      margin-top: 10px;
+      position: sticky;
+    }
+
+    div.sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 8%;
+
+
+    }
+
+    footer {
+      text-align: center;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+
+
+
+    .open-button {
+     
+     
+  background-color: #001df6;
+  color: rgb(255, 255, 255);
+  padding: 16px 20px;
+  border-radius:25% ;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  left: 28px;
+  width: 100px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+.map{
+  width:100%;
+  height: 50%;
+}
+iframe{
+  
+  width:80%;
+  height: 325px;
+ /* filter: invert(100%);*/
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+  </style>
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+
+<div>
+  <marquee width="100%" direction="right" height="25px" style="color: red; background-color: #9d9d9d; margin-top: 55px ;">
+    ............   📢This is a Official website for Voting online📢  ............               📢Further announcement will be updated soon on website.📢. ............
+    </marquee>
+
+</div>
+  
+
+  <div class="container-fluid">
+
+    <div class="heading fixed-top" style="padding: 1px;">
+      <ul style="background-color: #030202; color: aliceblue;">
+        <li style="float: left;"><img src="images/e-voting.png " style=" margin-left: 20px ; padding-top: 10px; alt="
+            SECUREVOTE" srcset="" height="45px" width="250px"></li>
+
+        <li style="float: right;"><a href="#contact"> CONTACT US</a></li>
+        <li style="float: right;"><a href="/E-voting/evm.html"> E-VOTING</a></li>
+        <li style="float: right;"><a href="#about"> POLITICAL PARTY</a></li>
+        <li style="float: right;"><a class="active" href="#home">HOME</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+
+
+
+  <div id="simpleModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><img src="images/e-voting.png " style=" alt=SECUREVOTE" srcset="" height="50px"
+              width="450px "></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3>Instructions</h3>
+          <br>
+          <p> 1.Voter Should be Above 18.</p>
+          <p> 2.Camera Access will be strictly required.</p>
+          <p>3.Any Malware Activities/Manipulation will lead to several Punishment.
+            (Can also lead to Min. 2 Years Jail)</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      OpenBootstrapPopup();
+    };
+    function OpenBootstrapPopup() {
+      $("#simpleModal").modal('show');
+    }
+  </script>
+
+
+  <div class="sticky">
+
+
+    <div id="container-fluid">
+
+
+      <video autoplay="true" id="videoElement">
+
+
+      </video>
+    </div>
+  </div>
+
+  <script>
+
+
+
+    let video = document.querySelector("#videoElement");
+
+    if (navigator.mediaDevices.getUserMedia) {
+
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+
+          video.srcObject = stream;
+
+        })
+        .catch(function (error) {
+
+          console.log("Something went wrong!");
+
+        })
+    } else {
+      console.log("getUserMedia not supported!");
+    }
+
+
+  </script>
+   
+  <br>
+  <br>
+  
+
+
+
+  <center><img src="images/dkte logo.png" height=30% width=20%
+      style="margin-top:10px ; margin-left: 25%; margin-bottom: 5px;"></center>
+  <center>
+    <font size="6" color="black">D.K.T.E. Society's Textile and Engineering Institue</font><BR>
+    <center>
+      <font size="6" color="black">Ichalkaranji</font><BR>
+      <font size="2" color="black">(An Autonomous Institute,Affiliated to Shivaji University,Kolhapur)<BR></font>
+    </CENTER>
+    <font size="4" color="black">Accredited with 'A+' Grade by NAAC<BR>416115 (Maharastra)</font>
+  </CENTER>
+
+
+
+
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active" style=" background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size:100% 120%;  ">
+        <img src="images/1.jpg" alt="welcome" class="d-block" style="width: 100% ; ">
+      </div>
+      <div class="carousel-item" style=" background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed ;background-size:100% 120%;  ">
+        <img src="images/2.jpg" alt="" class="d-block" style="width: 100% ; ">
+      </div>
+      <div class="carousel-item" style="background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed ;background-size:100% 120%;">
+        <img src="images/3.jpg" alt="New York" class="d-block" style="width: 100% ; ">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+
+
+
+  <div class="container">
+
+
+    <ul class="pagination justify-content-center">
+      <li class="page-item" style="background-color:rgba(255, 255, 255, 0.132)"><a class="page-link"
+          href="#about">Next</a></li>
+    </ul>
+    <br>
+
+
+
+
+    <div id="about">
+      <p>
+      <h1 style="font-size: 50px;  color: rgb(0, 0, 0); margin-top: 100px;margin-bottom: 100px; padding: 0px;">
+        <center><b>ABOUT PARTY</b></center>
+      </h1>
+      </p>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="images/bjp.jpg" class="card-img-top" alt="BJP">
+            <div class="card-body">
+              <h5 class="card-title">Bharatiya Janata Party (BJP)</h5>
+              <p class="card-text">Bharatiya Janata Party (BJP), English Indian People’s Party, pro-Hindu political
+                party of postindependence India. It has attempted to attract support from lower castes, particularly
+                through the appointment of several lower-caste members to prominent party positions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="images/congress.jpeg" class="card-img-top" alt="Congress">
+            <div class="card-body">
+              <h5 class="card-title">Congress</h5>
+              <p class="card-text">Founded in 1885, it was the first modern nationalist movement to emerge in the
+                British Empire in Asia and Africa.From the late 19th century, and especially after 1920, under the
+                leadership of Mahatma Gandhi, the Congress became the principal leader of the Indian independence
+                movement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="images/shivsena.jpg" class="card-img-top" alt="Shivsena">
+            <div class="card-body">
+              <h5 class="card-title">Shivsena</h5>
+              <p class="card-text">The party emerged from the Pro-Marathi nativist movement in Bombay (present-day
+                Mumbai), in which the party agitated for preferential treatment for the Marathi people over migrants
+                from other parts of India.It uses the saffron colour in its flag and a image of a roaring tiger.From
+                1966 to 2022 the party was ruled by the Thackeray political family.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="images/aap.jpg" class="card-img-top" alt="Aam Aadmi Party(AAP)">
+            <div class="card-body">
+              <h5 class="card-title">Aam Aadmi Party(AAP)</h5>
+              <p class="card-text">The Aam Aadmi Party is a national political party in India. AAP was founded in
+                November 2012 by Arvind Kejriwal and his then-companions,following the 2011 Indian anti-corruption
+                movement. AAP is currently the governing party in Delhi and Punjab. The party's election symbol is a
+                broom.[25]
+
+                The party came into existence following a rift between Kejriwal and Indian activist Anna Hazare
+                regarding the incorporation of electoral politics into the popular 2011 Indian anti-corruption movement,
+                which had been demanding a Jan Lokpal Bill since 2011. </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <br>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+    <ul class="pagination justify-content-center" style="background-color: rgba(255, 255, 255, 0.132)">
+      <li class="page-item"><a class="page-link" href="#home">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#e-voting">Next</a></li>
+    </ul>
+
+
+    <div class="container">
+      <div class="container">
+
+        <div id="contact" style="margin-top: 200; border: 10px solid rgb(0, 0, 0) ;background-image: url('images/blur.png'); background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size:100% 120%;  ">
+          <p>
+          <h1 style="font-size: 50px;  color: rgb(0, 0, 0); margin: 0px; padding: 0px;">
+            <center><b>CONTACT US</b></center>
+          </h1>
+          </p>
+
+          <form action="contact.php" method="post">
+            <div class="mb-20px mt-500px" style="margin: 20px;color: rgb(0, 0, 0); margin-bottom: 20px;">
+              <label for="first" class="form-label">First Name:</label>
+              <input type="text" class="form-control" id="first" placeholder="Enter First Name" name="first" required>
+              <br>
+              <label for="last" class="form-label">Last Name:</label>
+              <input type="text" class="form-control" id="last" placeholder="Enter Last Name" name="last" required>
+              <br>
+
+              <label for="email" class="form-label">E-mail ID:</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter E-mail ID" name="email" required>
+              <br>
+
+              <label for="contact" class="form-label">Contact no:</label>
+              <input type="number" class="form-control" id="contact" placeholder="Enter Contact no" name="contact"
+                pattern="[0-9]+" required>
+              <br>
+
+              <label for="query" class="form-label">Query(If Any):</label>
+              <input type="text" class="form-control" id="query" placeholder="Query" name="query">
+
+
+
+
+              <button type="submit" class="site-btn" style="margin: 20px; ">Submit</button>
+            </div>
+
+          </form>
+          <ul class="pagination justify-content-center">
+            <li class="page-item" style="background-color:rgba(255, 255, 255, 0.132)"><a class="page-link"
+                href="#about">Back to top</a></li>
+          </ul>
+        </div>
+      </div>
+     </div>
+    
+      <br>
+   
+      <div class="container-fluid">
+        <p> <h1 style="font-size: 50px;  color: rgb(0, 0, 0); margin-top: 100px;margin-bottom: 100px; padding: 0px;" ><center><b>SERVICE PLACES</b></center></h1></p>    
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active" style=" background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size:100% 120%;  ">
+                <img src="images/m.png" alt="welcome" class="d-block" style="height:fit-content width:fit-content;margin-left: 25%">
+              </div>
+              <div class="carousel-item" style=" background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed ;background-size:100% 120%;  ">
+                <img src="images/k.png" alt="" class="d-block" style="width:auto ;margin-left: 30%; ">
+              </div>
+              <div class="carousel-item"style="background-image: url('images/flag.jpg') ; background-repeat: no-repeat;
+              background-attachment: fixed ;background-size:100% 120%;">
+                <img src="images/b.png" alt="New York" class="d-block" style="width:auto ;margin-left: 27%">
+              </div>
+            </div>
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          
+          <br>
+        </div>
+
+        <br>
+        <br>
+        <br>
+      <div class="container-fluid">
+        <footer style="width: 100%; ">
+         
+          <a>Made by DREAM03</a>
+          <br>
+          <a>© Copyright SECUREVOTE <br> Current version of website updated on 24.02.2023
+          </a>
+          <br>
+         
+          <div class ="map">
+            <h1>Embedded location map</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.893040434029!2d74.46780507528298!3d16.682234984089714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0e26e0a8944ed%3A0x2abc23be634e333f!2sDKTE%20Society&#39;s%20Textile%20%26%20Engineering%20Institute%20(An%20Autonomous%20Institute)!5e0!3m2!1sen!2sin!4v1683054096517!5m2!1sen!2sin?igu=1" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+          </div>
+
+          <h3>Follow us on</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://nsdl.co.in/value/e-Voting.php" class="fa fa-google"></a>
+            <a href="https://www.linkedin.com/products/linkstar-infosys-pvt-ltd-evoting/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/@MyGovIndia" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/mygovindia/" class="fa fa-instagram"></a>
+               </footer>
+      </div>
+      
+   
+    <br>
+    <br>
+    
+<button class="open-button" onclick="openForm()"  >Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="chat.php" method="post" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" id="msg" class="form-control"  ></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+
+</html>
